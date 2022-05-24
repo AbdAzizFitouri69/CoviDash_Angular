@@ -1,0 +1,296 @@
+<!-- Back to top button -->
+<div class="back-to-top"></div>
+
+<header>
+    <div class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 text-sm">
+                    <div class="site-info">
+                        <a href="tel:+216 24 474 979"><span class="mai-call text-primary"></span> +216 24 474 979</a>
+                        <span class="divider">|</span>
+                        <a href="mailto:we.r.talended@gmail.com"><span class="mai-mail text-primary"></span> we.r.talended@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-right text-sm">
+                    <div class="social-mini-button">
+                        <a target="_blank" href="https://www.facebook.com/we.R.talended/"><span class="mai-logo-facebook-f"></span></a>
+                        <a target="_blank" href="https://instagram.com/we.r.talended?igshid=YmMyMTA2M2Y="><span class="mai-logo-instagram"></span></a>
+                    </div>
+                </div>
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- .topbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#"><span class="text-primary">Covi</span>-Dash</a>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport"
+                aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupport">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="" routerLink="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" routerLink="/about_us" routerLinkActive="active">About Us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="" routerLink="/symptoms" [matMenuTriggerFor]="menu">Bonus Features</a>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item routerLink="/patient" >Patient's Future State Prediction</button>
+                            <button mat-menu-item routerLink="/virus">Virus Contraction Prediction</button>
+                            <button mat-menu-item routerLink="/symptoms">Subject's Status Check</button>
+                            <button mat-menu-item>Coming soon...</button>
+                        </mat-menu>
+                    </li>
+                    <!-- <li class="nav-item">
+            <a class="nav-link" href="" routerLink="/dash/vaccination" >Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li> -->
+                    <li class="nav-item">
+                        <a class="btn btn-primary ml-lg-3" href="" routerLink="/dash/vaccination">Access Dashboard</a>
+                    </li>
+                </ul>
+            </div> <!-- .navbar-collapse -->
+        </div> <!-- .container -->
+    </nav>
+</header>
+
+<div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
+    <div class="banner-section">
+        <div class="container text-center wow fadeInUp">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Prediction</li>
+                </ol>
+            </nav>
+            <h1 class="font-weight-normal">Check Subject's Status</h1>
+        </div> <!-- .container -->
+    </div> <!-- .banner-section -->
+</div> <!-- .page-banner -->
+<br>
+
+<div class="container" style="text-align: center ;">
+
+    <h3>Fill in the blanks with the Subject's Details</h3>
+    <br>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <hr>
+        <div class="row" align="center">
+            <div class="col">
+                <h4>Personal Information</h4>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <label for="age">Subject's Age</label>
+                <select class="form-control" name="age" formControlName="age">
+                    <option value=0 selected>Between 0 and 14 years old</option>
+                    <option value=1>Between 15 and 24 years old</option>
+                    <option value=2>Between 25 and 64 years old</option>
+                    <option value=3>65 years old and More</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="gender">Subject's Sex</label>
+                <select class="form-control" name="gender" formControlName="gender">
+                    <option value=0 selected>Male</option>
+                    <option value=1>Female</option>
+                </select>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <div class="row" align="center">
+            <div class="col">
+                <h4>Symptoms</h4>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row" align="center">
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="fever" formControlName="fever">
+                <label class="form-check-label" for="fever">
+                    <h5>Has Fever?</h5>
+                </label>
+            </div>
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="cough" formControlName="cough">
+                <label class="form-check-label" for="cough">
+                    <h5>Has Cough?</h5>
+                </label>
+            </div>
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="fatigue" formControlName="fatigue">
+                <label class="form-check-label" for="fatigue">
+                    <h5>Has Fatigue?</h5>
+                </label>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row" align="center">
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="pains" formControlName="pains">
+                <label class="form-check-label" for="pains">
+                    <h5>Has Pain?</h5>
+                </label>
+            </div>
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="nasal_congestion"
+                    formControlName="nasal_congestion">
+                <label class="form-check-label" for="nasal_congestion">
+                    <h5>Has Nasal Congestion?</h5>
+                </label>
+            </div>
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="shortness_of_breath"
+                    formControlName="shortness_of_breath">
+                <label class="form-check-label" for="shortness_of_breath">
+                    <h5>Has Shortness Of Breath?</h5>
+                </label>
+            </div>
+        </div>
+
+
+        <br>
+
+        <div class="row" align="center">
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="runny_nose" formControlName="runny_nose">
+                <label class="form-check-label" for="runny_nose">
+                    <h5>Has Runny Nose?</h5>
+                </label>
+            </div>
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="sore_throat" formControlName="sore_throat">
+                <label class="form-check-label" for="sore_throat">
+                    <h5>Has Sore Throat?</h5>
+                </label>
+            </div>
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="diarrhea" formControlName="diarrhea">
+                <label class="form-check-label" for="diarrhea">
+                    <h5>Has Diarrhea?</h5>
+                </label>
+            </div>
+        </div>
+
+
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="chills" formControlName="chills">
+                <label class="form-check-label" for="chills">
+                    <h5>Has Chills?</h5>
+                </label>
+            </div>
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="headache" formControlName="headache">
+                <label class="form-check-label" for="headache">
+                    <h5>Has Headache?</h5>
+                </label>
+            </div>
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="vomiting" formControlName="vomiting">
+                <label class="form-check-label" for="vomiting">
+                    <h5>Has Vomiting?</h5>
+                </label>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <input class="form-check-input" type="checkbox" name="lives_in_affected_area"
+            formControlName="lives_in_affected_area">
+        <label class="form-check-label" for="lives_in_affected_area"><h5>Lives In Affected Area?</h5></label>
+            </div>
+        </div>
+
+        <br><br>
+        <button class="btn btn-primary" type="submit">Confirm & Send Data</button>
+
+    </form>
+
+
+
+</div>
+
+<br><br><br><br>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row px-md-3">
+            <div class="col-sm-6 col-lg-3 py-3">
+                <h5>Company</h5>
+                <ul class="footer-menu">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Editorial Team</a></li>
+                    <li><a href="#">Protection</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+                <h5>More</h5>
+                <ul class="footer-menu">
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Join as Doctors</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+                <h5>Our partner</h5>
+                <ul class="footer-menu">
+                    <li><a href="#">One-Fitness</a></li>
+                    <li><a href="#">One-Drugs</a></li>
+                    <li><a href="#">One-Live</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+                <h5>Contact</h5>
+                <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
+                <a href="#" class="footer-link">701-573-7582</a>
+                <a href="#" class="footer-link">healthcare@temporary.net</a>
+
+                <h5 class="mt-3">Social Media</h5>
+                <div class="footer-sosmed mt-3">
+                    <a href="#" target="_blank"><span class="mai-logo-facebook-f"></span></a>
+                    <a href="#" target="_blank"><span class="mai-logo-twitter"></span></a>
+                    <a href="#" target="_blank"><span class="mai-logo-google-plus-g"></span></a>
+                    <a href="#" target="_blank"><span class="mai-logo-instagram"></span></a>
+                    <a href="#" target="_blank"><span class="mai-logo-linkedin"></span></a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right
+            reserved</p>
+    </div>
+</footer>

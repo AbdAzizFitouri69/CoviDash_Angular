@@ -1,0 +1,79 @@
+<mat-drawer-container class="example-container" style="height: 100% ;">
+    <mat-drawer #drawer class="example-sidenav" mode="over"
+        style="width: 25% ; background-image: linear-gradient(#0B4C5F, #E88032);">
+        <div class="container" align="center">
+            <div class="row">
+                <div class="col">
+                    <img src="../../../../assets/wrt.png" width="300px">
+                    <br>
+                    <h2 style="color: white ;"><i>We R TalenDed</i></h2>
+                    <h3 style="color: white ;"><i>CoviDash</i></h3>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col">
+                    <div routerLink="/dash/vaccination" routerLinkActive="active" id="mi1" class="card">
+                        <div class="card-body">
+                            <h5>Recorded Vaccinations</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div routerLink="/dash/tests" routerLinkActive="active" id="mi2" class="card">
+                        <div class="card-body">
+                            <h5>Recorded Tests</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div routerLink="/dash/cases" routerLinkActive="active" id="mi3" class="card">
+                        <div class="card-body">
+                            <h5>Recorded Cases</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div id="mi4" class="card">
+                        <div routerLink="/home" routerLinkActive="active" class="card-body">
+                            <h5>Return to Home Screen</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </mat-drawer>
+
+    <!-- <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+        </button>
+    </div> -->
+
+    <mat-toolbar style="background-color:#43687B ;">
+        <button style="color: white ;" (click)="drawer.toggle()" class="btn">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span style="color: white ;">&nbsp;Recorded Vaccinations</span>
+    </mat-toolbar>
+    <iframe title="TheOne" width="100%" height="100%"
+        src="https://app.powerbi.com/reportEmbed?reportId=92c850dd-1074-4f98-8524-ef1341835f72&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1pLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D&filterPaneEnabled=false&navContentPaneEnabled=false&pageName=ReportSection"
+        frameborder="0" allowFullScreen="true"></iframe>
+
+    <iframe title="TheOne" width="100%" height="100%"
+        src="https://app.powerbi.com/reportEmbed?reportId=92c850dd-1074-4f98-8524-ef1341835f72&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1pLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D&filterPaneEnabled=false&navContentPaneEnabled=false&pageName=ReportSectionf9db07e4ea49148390e6"
+        frameborder="0" allowFullScreen="true"></iframe>
+
+</mat-drawer-container>

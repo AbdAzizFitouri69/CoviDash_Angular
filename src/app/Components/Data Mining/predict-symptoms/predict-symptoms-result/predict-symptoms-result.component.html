@@ -1,0 +1,13 @@
+<mat-dialog-content align="center">
+    <div *ngIf="result == 'NEGATIF'">
+        <h2>Subject <span style="color: rgb(2, 154, 2);"><u>Will be fine</u></span></h2>
+        <h2>and in the clear</h2>
+    </div>
+    <div *ngIf="result == 'POSITIF'">
+        <h2>Subject has possibly <span  style="color: red;">Contracted COVID-19</span></h2>
+        <h2>It is advisable to stay safe and quarantined.<br>If the symptoms persist, seeking a doctor or emergency services is optimal.</h2>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button class="btn" mat-dialog-close>Got It!</button>
+</mat-dialog-actions>

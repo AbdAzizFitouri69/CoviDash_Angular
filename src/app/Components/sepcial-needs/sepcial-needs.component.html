@@ -1,0 +1,70 @@
+<mat-dialog-content>
+    <mat-stepper linear>
+        <mat-step>
+            <ng-template matStepLabel>Personal Information</ng-template>
+            <div class="row">
+                <div class="col">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" placeholder="Your last Name here">
+                </div>
+                <div class="col">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" name="firstName" placeholder="Your first Name here">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" name="age" placeholder="Your Age here">
+                </div>
+                <div class="col">
+                    <label for="cin">National Identity Card Number</label>
+                    <input type="text" class="form-control" name="cin" placeholder="CIN">
+                </div>
+            </div>
+            <br>
+                <button type="button" class="btn btn-primary" matStepperNext>Next Section</button>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Address Information</ng-template>
+            <div class="row">
+                <div class="col">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" name="address" placeholder="Your address here">
+                </div>
+                <div class="col">
+                    <label for="postal">Postal Code</label>
+                    <input type="number" class="form-control" name="postal" placeholder="Your postal code here">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="tel">Phone Number</label>
+                    <input name="tel" type="tel" class="form-control" placeholder="Your Phone Number here">
+                </div>
+                <div class="col">
+                    <label for="desc">Address Description</label>
+                    <input name="desc" type="text" class="form-control"
+                        placeholder="A brief description of your address here">
+                </div>
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary" matStepperNext>Next Section</button>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Special Information</ng-template>
+            <div class="row">
+                <div class="col">
+                    <label for="dt">Disability Type</label>
+                    <input name="dt" class="form-control" placeholder="Your Disability Type here" type="text">
+                </div>
+                <div class="col">
+                    <label for="ac">Allergic Constraints</label>
+                    <input type="text" class="form-control" placeholder="Your allergies here" name="ac">
+                </div>
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary" matDialogClose>Finish and Submit</button>
+        </mat-step>
+    </mat-stepper>
+</mat-dialog-content>

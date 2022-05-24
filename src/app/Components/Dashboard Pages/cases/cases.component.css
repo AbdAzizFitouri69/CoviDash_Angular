@@ -1,0 +1,51 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+#mi1 {
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    border-color: aqua;
+    border-radius: 12px;
+}
+
+#mi1 :hover{
+    cursor: pointer;
+}
+
+#mi2 {
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    border-color: aqua;
+    border-radius: 12px;
+}
+
+#mi2 :hover{
+    cursor: pointer;
+}
+
+#mi3 {
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    border-color: aqua;
+    border-radius: 12px;
+}
+
+#mi3 :hover{
+    cursor: pointer;
+}
+
+#mi4 {
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    border-color: aqua;
+    border-radius: 12px;
+}
+
+#mi4 :hover{
+    cursor: pointer;
+}
